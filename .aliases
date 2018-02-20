@@ -1,0 +1,9 @@
+# Aliases
+alias gss='git status -s'
+alias gcm='git add . && git commit -m'
+alias gco='git checkout'
+alias gb='git branch'
+alias glog='gitlogtitle; git log --pretty=format:"%C(yellow)[%h]%Creset %C(green)%cn%Creset %C(magenta)(%ar) %Creset%n%C(cyan)%s%n" --graph'
+alias gstat='git rev-list --left-right --count'
+alias gbd='gitlogtitle; git log --left-right --graph --cherry-pick --pretty=format:"%C(yellow)[%h]%Creset %C(green)%cn%Creset%n %C(cyan)%s%n"'
+alias gitlogtitle='echo -e "\n\033[91m* * * * * * * * * * * * * * * * * [GIT LOG] * * * * * * * * * * * * * * * * *\n\033[0m"'
