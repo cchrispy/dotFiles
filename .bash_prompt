@@ -76,6 +76,7 @@ if tput setaf 1 &> /dev/null; then
 	violet=$(tput setaf 61);
 	white=$(tput setaf 15);
 	yellow=$(tput setaf 136);
+	grey=$(tput setaf 250);
 else
 	bold='';
 	reset="\e[0m";
@@ -89,6 +90,7 @@ else
 	violet="\e[1;35m";
 	white="\e[1;37m";
 	yellow="\e[1;33m";
+	grey="\e[38;5;250m";
 fi;
 	
 # Highlight the user name when logged in as root.
@@ -110,13 +112,13 @@ PS1="\[\033]0;\W\007\]"; # working directory base name
 # PS1+="\[${bold}\]\n"; # newline
 PS1+="\n"
 PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\]@";
+PS1+="\[${grey}\]@";
 PS1+="\[${hostStyle}\]\h"; # host
-PS1+="\[${white}\] in ";
+PS1+="\[${grey}\] in ";
 PS1+="\[${green}\]\W"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
+PS1+="\$(prompt_git \"\[${grey}\] on \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
 PS1+="\n";
-PS1+="\[${cyan}\]\$ \[${reset}\]"; # `$` (and reset color)
+PS1+="\[${white}\]\$ \[${grey}\]"; # `$` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
