@@ -1,4 +1,15 @@
 # Aliases
+
+# Navigation
+alias dl='cd ~/Downloads'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Shortcuts
+alias l='ls -Gp'
+alias ll='ls -Glp'
+
+# Git
 alias gss='git status -s'
 alias gcm='git add . && git commit -m'
 alias gco='git checkout'
