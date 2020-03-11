@@ -33,6 +33,17 @@ let g:pymode_options_colorcolumn = 0
 " Disable python-mode lint since syntastic is on
 let g:pymode_lint_on_write = 0
 
+" Synastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python']
+
 " Show line number
 set nu
 
@@ -44,3 +55,10 @@ set ts=4
 
 " Highlight current line
 set cursorline
+
+" Better searches
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nnoremap <CR> :nohlsearch<cr>
