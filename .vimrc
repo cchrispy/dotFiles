@@ -17,6 +17,18 @@ call plug#end()
 " Use Ctrl+n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" Easy pane switching in NERDTree
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Open NERDTree when vim starts
+autocmd vimenter * NERDTree
+
+" Close NERDTree when it's the last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Make dotfiles visible in NERDTree
 let NERDTreeShowHidden=1
 
