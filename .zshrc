@@ -140,3 +140,9 @@ if [ -f '/Users/chrischiang/personal/google-cloud-sdk/path.bash.inc' ]; then sou
 if [ -f '/Users/chrischiang/personal/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/chrischiang/personal/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH=/Users/chrischiang/istio-1.4.3/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+# Apply the command to Ctrl-T
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

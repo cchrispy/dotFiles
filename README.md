@@ -6,6 +6,8 @@ bash profile
 - zsh
 - tmux
 - vim
+- fzf
+- fd
 
 # OLD
 ### How to use
