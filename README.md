@@ -1,6 +1,13 @@
 # dotFiles
 bash profile
 
+# NEW
+- powerlevel10k
+- zsh
+- tmux
+- vim
+
+# OLD
 ### How to use
 1. Clone or download the zip file
 2. Move/copy the dotfiles to home directory `~`

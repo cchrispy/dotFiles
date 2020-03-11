@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,5 +138,3 @@ if [ -f '/Users/chrischiang/personal/google-cloud-sdk/path.bash.inc' ]; then sou
 
 # The next line enables zshell command completion for gcloud.
 if [ -f '/Users/chrischiang/personal/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/chrischiang/personal/google-cloud-sdk/completion.zsh.inc'; fi
-
-export PATH=/Users/chrischiang/istio-1.4.3/bin:$PATH
