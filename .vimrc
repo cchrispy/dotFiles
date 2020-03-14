@@ -3,14 +3,22 @@ call plug#begin('~/.vim/plugged')
 " NerdTree
 Plug 'preservim/nerdtree'
 
+" Enable FZF in Vim
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 " Python
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Syntax checking
 Plug 'scrooloose/syntastic'
 
-" " Color scheme
+" Color scheme
 Plug 'morhetz/gruvbox'
+
+" Status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -25,7 +33,10 @@ map <C-l> <C-w>l
 
 " Open NERDTree when vim starts
 autocmd vimenter * NERDTree
-
+" Bring focus back to the file
+autocmd VimEnter * wincmd p
+" Open NERDTree on new tab
+autocmd BufWinEnter * NERDTreeMirror
 " Close NERDTree when it's the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -38,6 +49,10 @@ let NERDTreeShowHidden=1
 " Enable gruvbox colorscheme
 colorscheme gruvbox
 set background=dark
+
+" Set airline theme
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Disable red line at column 80
 let g:pymode_options_colorcolumn = 0
