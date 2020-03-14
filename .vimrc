@@ -20,6 +20,9 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Comment lines
+Plug 'preservim/nerdcommenter'
+
 call plug#end()
 
 " Use Ctrl+n to toggle NERDTree
@@ -53,6 +56,9 @@ set background=dark
 " Set airline theme
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+
+" Align comments flush left
+let g:NERDDefaultAlign = 'left'
 
 " Disable red line at column 80
 let g:pymode_options_colorcolumn = 0
