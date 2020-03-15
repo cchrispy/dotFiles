@@ -23,6 +23,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Comment lines
 Plug 'preservim/nerdcommenter'
 
+" Surround pairs
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 " Use Ctrl+n to toggle NERDTree
