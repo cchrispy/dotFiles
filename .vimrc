@@ -28,6 +28,9 @@ Plug 'tpope/vim-surround'
 
 call plug#end()
 
+" Set leader key to spacebar
+let mapleader="\<Space>"
+
 " Use Ctrl+n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -91,6 +94,14 @@ set ts=4
 
 " Highlight current line
 set cursorline
+
+" Allow mouse usage
+" To c/p, use alt-click
+set mouse=a
+
+" Scroll 3 lines at a time
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " Better searches
 set hlsearch
