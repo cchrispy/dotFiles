@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " NerdTree
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Enable FZF in Vim
 Plug 'junegunn/fzf', { 'do': './install --bin' }
@@ -31,6 +31,12 @@ call plug#end()
 " Set leader key to spacebar
 let mapleader="\<Space>"
 
+" FZF hot keys
+nnoremap <silent> <leader>o :Files<CR>
+nnoremap <silent> <leader>a :Rg<CR>
+nnoremap <silent> <leader>l :Lines<CR>
+nnoremap <silent> <leader>f :Buffers<CR>
+
 " Use Ctrl+n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -41,11 +47,13 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Open NERDTree when vim starts
-autocmd vimenter * NERDTree
-" Bring focus back to the file
-autocmd VimEnter * wincmd p
+" autocmd vimenter * NERDTree
+" Refocus to the file
+" autocmd VimEnter * wincmd p
+
 " Open NERDTree on new tab
-autocmd BufWinEnter * NERDTreeMirror
+" autocmd BufWinEnter * NERDTreeMirror
+
 " Close NERDTree when it's the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
