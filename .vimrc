@@ -13,6 +13,9 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Syntax checking
 Plug 'scrooloose/syntastic'
 
+" Syntax checking
+" Plug 'dense-analysis/ale'
+
 " Color scheme
 Plug 'morhetz/gruvbox'
 
@@ -25,6 +28,9 @@ Plug 'preservim/nerdcommenter'
 
 " Surround pairs
 Plug 'tpope/vim-surround'
+
+" Auto pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -73,6 +79,9 @@ let g:airline_solarized_bg='dark'
 
 " Align comments flush left
 let g:NERDDefaultAlign = 'left'
+
+" Add 1 space after comment
+let g:NERDSpaceDelims = 1
 
 " Disable red line at column 80
 let g:pymode_options_colorcolumn = 0
