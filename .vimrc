@@ -32,6 +32,9 @@ Plug 'tpope/vim-surround'
 " Auto pairs
 Plug 'jiangmiao/auto-pairs'
 
+" Dim inactive windows
+Plug 'TaDaa/vimade'
+
 call plug#end()
 
 " Set leader key to spacebar
