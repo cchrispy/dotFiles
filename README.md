@@ -1,25 +1,14 @@
 # dotFiles
-bash profile
 
-# NEW
-- powerlevel10k
-- zsh
-- tmux
-- vim
-- fzf
-- fd
-
-# OLD
-### How to use
-1. Clone or download the zip file
-2. Move/copy the dotfiles to home directory `~`
-3. Restart bash, or run `source ~/.bash_profile`  
-
-
-Font of choice: [Adobe source code pro](https://github.com/adobe-fonts/source-code-pro), size 12  
-Install with HomeBrew:
+Install [powerlevel10k](https://github.com/romkatv/powerlevel10k).
+```bash
+# OSX
+brew update
+brew install tmux fzf fd
 ```
-brew tap caskroom/fonts && brew cask install font-source-code-pro
-```
+Put dotfiles into `~/.config` (symlink from `~` if desired).  
 
-see [Mathias's dot files](https://github.com/mathiasbynens/dotfiles)
+Optional: 
+- [pyenv](https://github.com/pyenv/pyenv)
+- [powerline](https://powerline.readthedocs.io/en/master/)
+- [tree](https://linux.die.net/man/1/tree)
