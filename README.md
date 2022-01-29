@@ -7,6 +7,8 @@ brew update
 brew install tmux fzf fd
 ```
 Put dotfiles into `~/.config` (symlink from `~` if desired).  
+  
+Color theme of choice: [Tomorrow Night Bright](https://github.com/chriskempson/tomorrow-theme)  
 
 Optional: 
 - [pyenv](https://github.com/pyenv/pyenv)
