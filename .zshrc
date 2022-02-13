@@ -45,12 +45,13 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.config/.p10k.zsh.
 [[ ! -f ~/.config/.p10k.zsh ]] || source ~/.config/.p10k.zsh
-eval "$(pyenv init -)"
 
 # https://github.com/junegunn/fzf
 [ -f ~/.config/.fzf.zsh ] && source ~/.config/.fzf.zsh
 
 # Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --color=always'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --exclude node_modules --color=always'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--ansi"
+
+eval "$(pyenv init -)"
